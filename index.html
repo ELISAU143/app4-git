@@ -19,8 +19,31 @@
 
 <script src="phonegap.js"></script><!--necesario*/-->
 
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
 </head>
-<body>
+<body onLoad="MM_preloadImages('imagenes/c7.jpg','imagenes/c8.jpg')">
 <div data-role="page"id="Principal" data-theme="a">
 	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
     <h1>Contaminacion ambiental en mi comunidad</h1>
@@ -28,7 +51,7 @@
     
     <div data-role="main" class="ui-content">
     	<div data-role="collapsible" data-content-theme="false">
-    <h1>Realmente es un problema grave?</h1>
+    <h1>¿Realmente es un problema grave?</h1>
     <div>
     <p>Aqui se muestra una imagen comparativa entre un mundo con contaminacion y uno sin esta, como se puede apreciar es impactante</p>
     <br>
@@ -77,7 +100,7 @@
     <img src="imagenes/mdpi.png" width="46" height="46"> 
     </div>
     <div>
-        <h4>Aplicacion Tres</h4>
+        <h4>Aplicacion Cuatro</h4>
         <h4>Alejandro Elisau Contreras Izucar</h4>
         </div>
         </div>
@@ -91,6 +114,7 @@
         <h2>QUE ES?</h2>
         <H3>La contaminación es la introducción de sustancias u otros elementos físicos en un medio que provocan que éste sea inseguro o no apto para su uso. El medio puede ser un ecosistema, un medio físico o un ser vivo. El contaminante puede ser una sustancia química, energía (como sonido, calor, luz o radiactividad).
         Es siempre una alteración negativa del estado natural del medio, y por lo general, se genera como consecuencia de la actividad humana considerándose una forma de impacto ambiental.</H3>
+        <a href="https://www.ecoosfera.com" target="_self">Mas informacion sobre la ecologia.</a>
         <div data-role="main" class="ui-content">
         <div data-role="collapsible" data-content-theme="false">
         <h1>Ejemplo de contaminacion</h1>
@@ -109,7 +133,7 @@
         <div>
             <img src="imagenes/mdpi.png" width="46" height="46"> 
         </div>
-        <h4> Aplicacion Tres, CIAE</h4>
+        <h4> Aplicacion Cuatro, CIAE</h4>
     </div>
 </div>
  <div data-role="page" id="pagina2" data-add-back-btn="true" data-theme="a">
@@ -170,7 +194,7 @@ Contaminación lumínica
         <div>
             <img src="imagenes/mdpi.png" width="46" height="46"> 
         </div>
-                <h4> Aplicacion Tres, CIAE</h4>
+                <h4> Aplicacion Cuatro, CIAE</h4>
     </div>
 </div>
  <div data-role="page" id="pagina3" data-add-back-btn="true" data-theme="a">
@@ -185,14 +209,13 @@ Contaminación lumínica
 <li>La contaminación afecta al suelo y al agua: la contaminación al medio ambiente afecta al agua y al suelo, lo que hace que cada vez haya más especies en peligro de extinción. El agua no es potable en una gran cantidad de sitios y el suelo para la siembre no tiene los nutrientes necesarios, lo que hace que cada vez se pueda cultivar menos y que el número de cosechas para nuestro sustento sea cada vez menor.
 <li>La contaminación afecta al clima: seguro que ya te has dado cuenta que los inviernos pueden ser mucho más fríos o que los veranos son mucho más calurosos, a la vez que seguro te has dado cuenta que las estaciones como la Primavera Verano y el verano pueden ser más largas y que las de temperaturas medias, son cada vez más cortas. 
 </h3>
-        <img src="imagenes/c5.jpg" width="50%" height="50%"> 
-        </div>
+        <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sus1','','imagenes/c7.jpg',1)"><img src="imagenes/c3.jpg" width="250" height="167" id="sus1"></a> </div>
     </div>
         <div data-role="footer" align="center" data-theme="a" data-position="fixed">     
         <div>
             <img src="imagenes/mdpi.png" width="46" height="46"> 
         </div>
-                <h4> Aplicacion Tres, CIAE</h4>
+                <h4> Aplicacion Cuatro, CIAE</h4>
     </div>
 </div>
  <div data-role="page" id="pagina4" data-add-back-btn="true" data-theme="a">
@@ -213,7 +236,7 @@ El reciclaje es un componente clave en la reducción de desechos contemporáneos
         <div>
             <img src="imagenes/mdpi.png" width="46" height="46"> 
         </div>
-                <h4> Aplicacion Tres, CIAE</h4>
+                <h4> Aplicacion Cuatro, CIAE</h4>
     </div>
 </div>
  <div data-role="page" id="pagina5" data-add-back-btn="true" data-theme="a">
@@ -229,13 +252,14 @@ El reciclaje es un componente clave en la reducción de desechos contemporáneos
 <li>Tomar y generar conciencia de lo que está sucediendo.
 <li>Tener sentido de responsabilidad.
 </h3>
-        <img src="imagenes/c4.jpg" width="50%" height="50%"> 
-        </div>
+
+
+        <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sus2','','imagenes/c8.jpg',1)"><img src="imagenes/c4.jpg" width="250" height="167" id="sus2"></a> </div>
     </div>
         <div data-role="footer" align="center" data-theme="a" data-position="fixed">     
         <div>
             <img src="imagenes/mdpi.png" width="46" height="46"> 
         </div>
-                <h4> Aplicacion Dos, CIAE</h4>
+                <h4> Aplicacion Cuatro, CIAE</h4>
     </div>
 </div>
